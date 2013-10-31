@@ -1,0 +1,127 @@
+.blurry{ 
+	.homescreen,
+	.wrapper {
+		@include transition(all 0.2s ease-in-out);
+		-webkit-filter: blur(8px);
+		filter: blur(8px);
+	}
+}
+
+.search-on {
+
+	.search-box {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.search-box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.65);
+	@include transition(all 0.6s $iosAnimation);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+	display: none;
+
+	header {
+		margin-top: 10px;
+		padding: 0 10px;
+		@extend .clearfix;
+		> * {
+			float: left;
+		}
+	}
+
+	form {
+		width: 75%;
+	}
+
+	#searchbar {
+		background: #fff url(../../img/search-icon-dark.png) 5px center no-repeat;
+		background-size: auto 20px;
+		border: 1px solid #3c454f;
+		border-radius: 7px;
+		height: 35px;
+		width: 100%;
+		-moz-box-sizing: border-box;
+	   	-webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+		padding: 0 15px 0 30px;
+		font-size: 1.5em;
+		font-family: $proxima;
+		font-weight: 100;
+		color: #828ba4;
+		display: block;
+		position: relative;
+		-webkit-user-select: auto;
+		outline: none;
+
+	}
+
+	#cancel-search {
+		color: #fff;
+		font-size: 1.7em;
+		text-decoration: none;
+		font-family: $proxima;
+		width: 25%;
+		padding: 0;
+		line-height: 35px;
+		text-align: center;
+	}
+
+	#search-results {
+		border-radius: 7px;
+		background: rgba(255, 255, 255, 0.1);
+		margin: 5px 10px;
+
+		a {
+			display: block;
+			color: #fff;
+			box-sizing: border-box;
+			padding: 12px 30px 12px 45px;
+			font-size: 1.5em;
+			text-decoration: none;
+			font-family: $proxima;
+			border-bottom: 1px solid rgba(255,255,255,0.3);
+			position: relative;
+			font-weight: 100;
+
+			img {
+				width: 27px;
+				height: auto;
+				position: absolute;
+				left: 8px;
+				top: 50%;
+				margin-top: -14px;
+			}
+
+			&:after {
+				content: "+";
+				color: rgba(#fff, 0.8);
+				font-size: 1.5em;
+				display: block;
+				width: 10px;
+				height: 10px;
+				line-height: 10px;
+				font-size: 20px;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				margin-top: -5px;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+
+}

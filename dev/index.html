@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>XYO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="apple-touch-icon" href="../img/icon/app-icon-76.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="../img/icon/app-icon-76.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="../img/icon/app-icon-120.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="../img/icon/app-icon-152.png" />
+        <link rel="stylesheet" href="css/main.css">
+        <script src="content.js"></script>
+    </head>
+    <body>
+        <!-- stream wrapper -->
+        <section id="stream-wrapper" class="wrapper">
+        </section>
+        <!-- details wrapper -->
+        <section id="details-wrapper" class="details-wrapper">
+        </section>
+        <!-- homescreen wrapper -->
+        <section id="home-wrapper" class="homescreen">
+        </section>
+        <!-- searchbox wrapper -->
+        <section id="search-box" class="search-box">
+            <header>
+                <form method="get" action="#">
+                    <input type="text" id="searchbar" placeholder="Search anything!" />
+                </form>
+                <a href="#" id="cancel-search">Cancel</a>
+            </header>
+            <div id="search-results">
+            </div>
+        </section>
+        <!-- cover shown when app is loading -->
+        <div class="cover"></div>
+
+        <!-- TEMPLATES -->
+        <script id="result-template" type="text/x-handlebars-template">
+            {{#each results}}
+            <a href="#" {{#if this.target}}data-target="{{this.target}}"{{/if}} {{#if this.interestFullName}}data-interestname="{{this.interestFullName}}"{{/if}}>
+                {{#if this.imgUrl}}<img src="{{this.imgUrl}}" />{{/if}}{{this.name}}
+            </a>
+            {{/each}}
+        </script>
+        <script id="cards-nav" type="text/x-handlebars-template">
+            <nav id="cards-navigation">
+                <a href="#" class="go-back-button"><span></span></a>
+                <h2>{{title}}</h2>
+            </nav>
+        </script>
+        <script id="cards-nav" type="text/x-handlebars-template">
+        </script>
+        <script id="details-card" type="text/x-handlebars-template">
+            <header>
+                <img src="{{iconUrl}}" alt="" class="app-icon">
+                <section class="app-description">
+                    <span class="author">by {{companyName}}</span>
+                    <span class="app-type">{{appType}}</span>
+                    <div class="buttons">
+                        <a href="#" class="add"></a>
+                        <a href="#" class="share"></a>
+                        <a href="#" class="download">FREE</a>
+                    </div>
+                </section>
+            </header>
+            <article class="card">
+                {{#if details.intro.excerpt}}
+                <div class="excerpt">
+                    <p>{{{details.intro.excerpt}}}</p>
+                    <a href="#">Full description</a>
+                </div>
+                {{/if}}
+                {{#if details.intro.screenshots}}
+                <section class="slide screenshot-slider" data-name="Screenshots">
+                    <div class="screenshot-wrap">
+                        {{#each details.intro.screenshots}}
+                        <div style="background-image: url({{this}});">
+                        </div>
+                        {{/each}}
+                    </div>
+                    <div class="bullets">
+                        <div>
+                        </div>
+                    </div>
+                </section>
+                {{/if}}
+            </article>
+
+            <article class="card">
+                {{#if details.comments.title}}
+                    <h1 class="title">{{details.comments.title}}</h1>
+                {{/if}}
+                {{#if details.comments.chartUrl}}
+                    <img src="{{details.comments.chartUrl}}" />
+                {{/if}}
+                {{#if details.comments.commentsList}}
+                    <div class="comments-list">
+                        <ul>
+                            {{#each details.comments.commentsList}}
+                            <li>
+                                <span class="content">{{this.content}}</span>
+                                <span class="stars"></span>
+                                <span class="when">{{this.when}}</span>
+                                
+                            </li>
+                            {{/each}}
+                        </ul>
+                        <a href="#">Read all comments</a>
+                    </div>
+                {{/if}}
+            </article>
+        </script>
+        <script id="card" type="text/x-handlebars-template">
+            <article class="card" data-app-name="{{appName}}">
+                <div class="card-content {{#if front.styling}}{{front.styling}}{{/if}}">
+                    {{#if front.coverPhoto}}
+                    <div class="coverPhoto" style="background-image: url({{front.coverPhoto}});">
+                    </div>
+                    {{/if}}
+                    {{#if front.badge.second}}
+                    <div class="round-badge second {{front.badge.second.color}}">
+                        <img src="{{front.badge.second.imgUrl}}" />
+                        <p>{{front.badge.second.text}}</p>
+                    </div>
+                    {{/if}}
+                    {{#ifeq front.styling 'row-layout'}}
+                        {{#if front.coverPhoto2}}
+                        <div class="coverPhoto2" style="background-image: url({{front.coverPhoto2}});">
+                        </div>
+                        {{/if}}
+                    {{/ifeq}}
+                    {{#if front.video}}
+                        <div class="movie">
+                        <iframe width="100%" height="100%" frameborder='0' src='http://www.youtube.com/embed/{{front.video.id}}?wmode=transparent&controls=0&color=white&showinfo=0&rel=0&theme=light' type='text/html' class='youtube-player'></iframe>
+                        </div>
+                    {{/if}}
+                    <div class="description">
+                        {{#if front.metacritic}}
+                        <div class="metacritic">
+                            {{{front.metacritic.content}}}
+                            <div class="meta">
+                                <span class="author">{{front.metacritic.author}}</span>
+                                <span class="score">Metacritic score <i>{{front.metacritic.score}}</i></span>
+                            </div>
+                        </div>
+                        {{/if}}
+                        {{#if front.comment}}
+                        <div class="comment-excerpt">
+                            <p>{{front.comment.content}}</p>
+                            <span class="stars"></span>
+                        </div>
+                        {{/if}}
+                        {{#if front.twitter}}
+                        <div class="twitter-excerpt">
+                            <ul>
+                                {{#each front.twitter.comments}}
+                                <li>
+                                    <span class="post">{{{this.content}}}</span>
+                                    <span class="meta">{{{this.meta}}}</span>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        {{/if}}
+                        {{#if front.prosCons}}
+                        <div class="pros-cons">
+                            <ul>
+                                {{#if front.prosCons.positive}}
+                                <li class="positive">
+                                    <p>{{front.prosCons.positive}}</p>
+                                </li>
+                                {{/if}}
+                                {{#if front.prosCons.negative}}
+                                <li class="negative">
+                                    <p>{{front.prosCons.negative}}</p>
+                                </li>
+                                {{/if}}
+                            </ul>
+                        </div>
+                        {{/if}}
+                        {{#if front.priceDrop}}
+                        <div class="price-drop">
+                            <div class="chart">
+                                <div class="first-column">
+                                {{{front.priceDrop.leftText}}}
+                                </div>
+                                <div class="second-column">
+                                {{{front.priceDrop.rightText}}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                        <img src="{{iconUrl}}" />
+                        <div class="content">
+                            <h1>{{appName}}</h1>
+                            {{#if appType}}
+                            <p class="interest">{{appType}}</p>
+                            {{/if}}
+                            <p class="price">{{price}}</p>
+                        </div>
+                        <a href="#" class="button">Save</a>
+
+                        {{#if front.badge.first}}
+                        <div class="round-badge first {{front.badge.first.color}}">
+                            <img src="{{front.badge.first.imgUrl}}" />
+                            <p>{{front.badge.first.text}}</p>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </article>
+        </script>
+        <script id="globe-card" type="text/x-handlebars-template">
+            <article class="card not-draggable">
+                <div class="card-content earth-card">
+                    <h1>{{title}}</h1>
+                    <div class="globe">
+                        {{#if markers}}
+                            {{#each markers}}
+                            <div class="marker" style="top: {{this.position.top}}; left: {{this.position.left}};">
+                                <div class="content">
+                                    <img src="{{this.imgUrl}}" />
+                                    {{this.appName}}
+                                </div>
+                                <div class="point"></div>
+                            </div>
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                    <span class="star-sky first">
+                    </span>
+                    <span class="star-sky second">
+                    </span>
+                </div>
+                <div class="blackout"></div>
+            </article>
+        </script>
+        <script id="facebook-card" type="text/x-handlebars-template">
+            <article class="card not-draggable">
+                <div class="card-content facebook-card">
+                    <h1 class="title">{{{title}}}</h1>
+                    <div class="content">
+                        <ul class="apps">
+                            {{#each appsList}}
+                            <li>
+                                <img src="{{this.appIcon}}" class="app-icon" />
+                                <h2>{{this.appName}}</h2>
+                                <h3>{{this.appType}}</h3>
+                                {{#if this.avatars}}
+                                    <ul class="avatars">
+                                        {{#each this.avatars}}
+                                        <li>
+                                            <img src="{{this}}" />
+                                        </li>
+                                        {{/each}}
+                                        {{#if this.number}}
+                                        <li class="number">{{this.number}}</li>
+                                        {{/if}}
+                                    </ul>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </script>
+        <script id="plain-card" type="text/x-handlebars-template">
+            <article class="card not-draggable">
+                <div class="card-content plain-card" style="background-image: url({{bgUrl}});">
+                </div>
+            </article>
+        </script>
+        <script id="double-interest-card" type="text/x-handlebars-template">
+            <article class="card not-draggable">
+                <div class="card-content double-interest-card">
+                    {{#with top}}
+                    <div class="top {{style}}" {{#if imgUrl}}style="background-image: url({{imgUrl}});"{{/if}}>
+                        <div class="content">
+                            <h2>{{title}}</h2>
+                            <a href="#" {{#if target}}data-target="{{target}}"{{/if}}>{{buttonText}}</a>
+                        </div>
+                    </div>
+                    {{/with}}
+                    {{#with bottom}}
+                    <div class="bottom {{style}}" {{#if imgUrl}}style="background-image: url({{imgUrl}});"{{/if}}>
+                        <div class="content">
+                            <h2>{{title}}</h2>
+                            <a href="#" {{#if target}}data-target="{{target}}"{{/if}}>{{buttonText}}</a>
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+            </article>
+        </script>
+        <script id="interest-list-card" type="text/x-handlebars-template">
+            <article class="card not-draggable">
+                <div class="card-content interest-list-card {{style}}">
+                    <h2>{{title}}</h2>
+                    <ul>
+                    {{#each interestList}}
+                        <li><a href="#" {{#if this.target}}data-target="{{this.target}}"{{/if}}>{{this.title}}</a></li>
+                    {{/each}}
+                    </ul>
+                </div>
+            </article>
+        </script>
+        <script id="interest-card" type="text/x-handlebars-template">
+            <article class="card not-draggable">
+                <div class="card-content interest-card {{style}}" {{#if imgUrl}}style="background-image: url({{imgUrl}});"{{/if}}>
+                    <h2>{{title}}</h2>
+                    <ul>
+                    {{#each appsList}}
+                        <li><a href="#" {{#if targetApp}}data-target-app="{{this.targetApp}}"{{/if}}><img src="{{this.iconUrl}}" /></a></li>
+                    {{/each}}
+                        <li><a href="#" class="number" data-target="{{numberIcon.target}}">{{numberIcon.appsAmount}}</a></li>
+                    </ul>
+                    <h3>{{interestName}}</h3>
+                    <a href="#" class="btn" {{#if target}}data-target="{{target}}"{{/if}}>{{buttonText}}</a>
+                </div>
+                <div class="blackout"></div>
+            </article>
+        </script>
+        <script id="city-card" type="x-handlebars-template">
+            <article class="card not-draggable">
+                <div class="card-content city-card" {{#if imgUrl}}style="background-image: url({{imgUrl}});"{{/if}}>
+                    <div class="content">
+                        <h1>{{title}}</h1>
+                        {{#if appsList}}
+                            <ul>
+                            {{#each appsList}}
+                                <li>
+                                    <a href="#" data-target-app="{{this.targetApp}}">
+                                        <img src="{{this.imgUrl}}" />
+                                        <h2>{{this.appName}}</h2>
+                                        <h3>{{this.appType}}</h3>
+                                    </a>
+                                </li>
+                            {{/each}}
+                            </ul>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="blackout"></div>
+            </article>
+        </script>
+        <script id="home-shelf" type="x-handlebars-template">
+            <nav>
+                <a href="#" id="search-button"></a>
+                <h1>Home</h1>
+            </nav>
+            <div class="card home-shelf" data-section-name="Home">
+                {{#if homeContent}}
+                    {{#each homeContent}}
+                        <article class="book {{this.style}}" {{#if this.imgUrl}}style="background-image:url({{this.imgUrl}});"{{/if}} {{#if this.target}}data-target="{{this.target}}"{{/if}} {{#if this.interestFullName}}data-interestname="{{this.interestFullName}}"{{/if}}>
+                            <div class="left-border"></div>
+                            <div class="content">
+                                {{#if this.avatarImg}}
+                                    <img class="avatar" src="{{this.avatarImg}}" />
+                                {{/if}}
+                                {{#if this.appsList}}
+                                <ul class="apps">
+                                    {{#each this.appsList}}
+                                    <li><a href="#"><img src="{{this}}" /></a></li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                                {{#if this.title}}
+                                <h1 class="title">{{{this.title}}}</h1>
+                                {{/if}}
+                                {{#if this.text}}
+                                <p class="text">{{{this.text}}}</p>
+                                {{/if}}
+                            </div>
+                            {{#if this.badge}}
+                            <span class="badge">{{this.badge}}</span>
+                            {{/if}}
+                            {{#if this.star}}
+                            <div class="star"></div>
+                            {{/if}}
+                            {{#ifeq style 'button'}}
+                            <span class="cross"></span>
+                            {{/ifeq}}
+                            <div class="loader"><span></span></div>
+                        </article>
+                    {{/each}}
+                {{/if}}
+            </div>
+            <div class="card interest-shelf" data-section-name="My interests">
+                {{#if interestContent}}
+                    {{#each interestContent}}
+                        <article class="book {{this.style}}" {{#if this.imgUrl}}style="background-image:url({{this.imgUrl}});"{{/if}} {{#if this.target}}data-target="{{this.target}}"{{/if}} {{#if this.interestFullName}}data-interestname="{{this.interestFullName}}"{{/if}}>
+                            <div class="left-border"></div>
+                            <div class="content">
+                                {{#if this.avatarImg}}
+                                    <img class="avatar" src="{{this.avatarImg}}" />
+                                {{/if}}
+                                {{#if this.title}}
+                                <h1 class="title">{{{this.title}}}</h1>
+                                {{/if}}
+                                {{#if this.text}}
+                                <p class="text">{{{this.text}}}</p>
+                                {{/if}}
+                                {{#if this.appsList}}
+                                <ul class="apps">
+                                    {{#each this.appsList}}
+                                    <li><a href="#"><img src="{{this}}" /></a></li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                            </div>
+                            {{#if this.badge}}
+                            <span class="badge">{{this.badge}}</span>
+                            {{/if}}
+                            {{#if this.star}}
+                            <div class="star"></div>
+                            {{/if}}
+                            {{#ifeq style 'button'}}
+                            <span class="cross"></span>
+                            {{/ifeq}}
+                            <div class="loader"><span></span></div>
+                        </article>
+                    {{/each}}
+                {{/if}}
+            </div>
+            <div class="card magazine-shelf" data-section-name="My magazines">
+                {{#if magazineContent}}
+                    {{#each magazineContent}}
+                        <article class="book {{this.style}}" {{#if this.imgUrl}}style="background-image:url({{this.imgUrl}});"{{/if}} {{#if this.target}}data-target="{{this.target}}"{{/if}} {{#if this.interestFullName}}data-interestname="{{this.interestFullName}}"{{/if}}>
+                            <div class="left-border"></div>
+                            <div class="content">
+                                {{#if this.avatarImg}}
+                                    <img class="avatar" src="{{this.avatarImg}}" />
+                                {{/if}}
+                                {{#if this.title}}
+                                <h1 class="title">{{{this.title}}}</h1>
+                                {{/if}}
+                                {{#if this.text}}
+                                <p class="text">{{{this.text}}}</p>
+                                {{/if}}
+                                {{#if this.appsList}}
+                                <ul class="apps">
+                                    {{#each this.appsList}}
+                                    <li><a href="#"><img src="{{this}}" /></a></li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                            </div>
+                            {{#if this.badge}}
+                            <span class="badge">{{this.badge}}</span>
+                            {{/if}}
+                            {{#if this.star}}
+                            <div class="star"></div>
+                            {{/if}}
+                            {{#ifeq style 'button'}}
+                            <span class="cross"></span>
+                            {{/ifeq}}
+                            <div class="loader"><span></span></div>
+                        </article>
+                    {{/each}}
+                {{/if}}
+            </div>
+        </script>
+        <!-- END TEMPLATES -->
+
+        <script src="homecontent.js"></script>
+        <script src="content.js"></script>
+        <script src="searchcontent.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

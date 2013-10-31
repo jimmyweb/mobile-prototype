@@ -1,0 +1,32 @@
+@mixin delay($delay) {
+	-webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    animation-delay: $delay;
+}
+
+@mixin duration($duration) {
+	-webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+}
+
+@mixin filter($prop){
+	-webkit-filter: $prop;
+	-moz-filter: $prop;
+	-ms-filter: $prop;
+	-o-filter: $prop;
+	filter: $prop; 
+}
+
+@mixin transition($prop){
+	-webkit-transition: $prop;
+    transition: $prop;
+}
+
+@mixin translate3d($x, $y, $z){
+	-webkit-transform: translate3d($x, $y, $z);
+    transform: translate3d($x, $y, $z);
+}
+

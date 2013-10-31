@@ -1,0 +1,2899 @@
+/* normalize.css v1.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 22, ../sass/_base.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 32, ../sass/_base.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 43, ../sass/_base.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 53, ../sass/_base.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 68, ../sass/_base.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 83, ../sass/_base.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+/* line 91, ../sass/_base.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 103, ../sass/_base.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 112, ../sass/_base.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 126, ../sass/_base.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 131, ../sass/_base.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 136, ../sass/_base.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 141, ../sass/_base.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 146, ../sass/_base.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 151, ../sass/_base.scss */
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 160, ../sass/_base.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 169, ../sass/_base.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 173, ../sass/_base.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 181, ../sass/_base.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+/* line 190, ../sass/_base.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+/* line 200, ../sass/_base.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 210, ../sass/_base.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 221, ../sass/_base.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 231, ../sass/_base.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+/* line 241, ../sass/_base.scss */
+q {
+  quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+/* line 250, ../sass/_base.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 259, ../sass/_base.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 268, ../sass/_base.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 275, ../sass/_base.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 279, ../sass/_base.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 294, ../sass/_base.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 298, ../sass/_base.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 308, ../sass/_base.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 317, ../sass/_base.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+/* line 331, ../sass/_base.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 340, ../sass/_base.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 352, ../sass/_base.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 364, ../sass/_base.scss */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 372, ../sass/_base.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 384, ../sass/_base.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+/* line 401, ../sass/_base.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 414, ../sass/_base.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 426, ../sass/_base.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 443, ../sass/_base.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 454, ../sass/_base.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 466, ../sass/_base.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 479, ../sass/_base.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 492, ../sass/_base.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 501, ../sass/_base.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 511, ../sass/_base.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 524, ../sass/_base.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 542, ../sass/_base.scss */
+.clearfix:before, .card .card-content.interest-list-card ul:before, .card .card-content.interest-card ul:before, .card .card-content.city-card ul:before, .card .card-content.facebook-card .apps:before, .card .card-content.facebook-card .avatars:before, .card .description:before, .homescreen nav ul:before, .search-box header:before, .details-wrapper > header:before, .details-wrapper > header .app-description:before, .details-wrapper .excerpt:before, .details-wrapper .comments-list:before, .details-wrapper .screenshot-wrap:before, .bullets > div:before, .metacritic:before, .metacritic .meta:before,
+.clearfix:after,
+.card .card-content.interest-list-card ul:after,
+.card .card-content.interest-card ul:after,
+.card .card-content.city-card ul:after,
+.card .card-content.facebook-card .apps:after,
+.card .card-content.facebook-card .avatars:after,
+.card .description:after,
+.homescreen nav ul:after,
+.search-box header:after,
+.details-wrapper > header:after,
+.details-wrapper > header .app-description:after,
+.details-wrapper .excerpt:after,
+.details-wrapper .comments-list:after,
+.details-wrapper .screenshot-wrap:after,
+.bullets > div:after,
+.metacritic:after,
+.metacritic .meta:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 547, ../sass/_base.scss */
+.clearfix:after, .card .card-content.interest-list-card ul:after, .card .card-content.interest-card ul:after, .card .card-content.city-card ul:after, .card .card-content.facebook-card .apps:after, .card .card-content.facebook-card .avatars:after, .card .description:after, .homescreen nav ul:after, .search-box header:after, .details-wrapper > header:after, .details-wrapper > header .app-description:after, .details-wrapper .excerpt:after, .details-wrapper .comments-list:after, .details-wrapper .screenshot-wrap:after, .bullets > div:after, .metacritic:after, .metacritic .meta:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 556, ../sass/_base.scss */
+.clearfix, .card .card-content.interest-list-card ul, .card .card-content.interest-card ul, .card .card-content.city-card ul, .card .card-content.facebook-card .apps, .card .card-content.facebook-card .avatars, .card .description, .homescreen nav ul, .search-box header, .details-wrapper > header, .details-wrapper > header .app-description, .details-wrapper .excerpt, .details-wrapper .comments-list, .details-wrapper .screenshot-wrap, .bullets > div, .metacritic, .metacritic .meta {
+  *zoom: 1;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url("../../fonts/mark_simonson_-_proxima_nova_bold.eot");
+  src: url("../../fonts/mark_simonson_-_proxima_nova_bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/mark_simonson_-_proxima_nova_bold.woff") format("woff"), url("../../fonts/mark_simonson_-_proxima_nova_bold.ttf") format("truetype"), url("../../fonts/mark_simonson_-_proxima_nova_bold.svg#proxima_nova_rgbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url("../../fonts/mark_simonson_-_proxima_nova_regular.eot");
+  src: url("../../fonts/mark_simonson_-_proxima_nova_regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/mark_simonson_-_proxima_nova_regular.woff") format("woff"), url("../../fonts/mark_simonson_-_proxima_nova_regular.ttf") format("truetype"), url("../../fonts/mark_simonson_-_proxima_nova_regular.svg#proxima_nova_rgregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novalight';
+  src: url("../../fonts/proximanova-light-webfont.eot");
+  src: url("../../fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/proximanova-light-webfont.woff") format("woff"), url("../../fonts/proximanova-light-webfont.ttf") format("truetype"), url("../../fonts/proximanova-light-webfont.svg#proxima_novalight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@-moz-keyframes spin {
+  /* line 41, ../sass/_defs.scss */
+  0% {
+    -moz-transform: scale(1);
+  }
+
+  /* line 45, ../sass/_defs.scss */
+  25% {
+    -moz-transform: scale(0.8);
+  }
+
+  /* line 49, ../sass/_defs.scss */
+  75% {
+    -moz-transform: scale(1.5);
+  }
+
+  /* line 53, ../sass/_defs.scss */
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes spin {
+  /* line 59, ../sass/_defs.scss */
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 63, ../sass/_defs.scss */
+  25% {
+    -webkit-transform: scale(0.8);
+  }
+
+  /* line 67, ../sass/_defs.scss */
+  75% {
+    -webkit-transform: scale(1.5);
+  }
+
+  /* line 71, ../sass/_defs.scss */
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  /* line 77, ../sass/_defs.scss */
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 82, ../sass/_defs.scss */
+  25% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  /* line 87, ../sass/_defs.scss */
+  75% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+
+  /* line 92, ../sass/_defs.scss */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 98, ../sass/_defs.scss */
+html {
+  height: 100%;
+}
+
+/* line 102, ../sass/_defs.scss */
+body {
+  min-height: 100%;
+  background: url(../../img/home-bg.png) center center no-repeat;
+  background-size: cover;
+  font-family: "proxima_novalight", sans-serif, sans-serif;
+  font-size: 62.5%;
+}
+
+/* line 112, ../sass/_defs.scss */
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+  font-family: "proxima_nova_rgbold", sans-serif, sans-serif;
+}
+
+/* line 118, ../sass/_defs.scss */
+a:active {
+  opacity: 0.5;
+}
+
+/* line 4, ../sass/_rules.scss */
+.stream-on .wrapper {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* line 12, ../sass/_rules.scss */
+.backAnimation .wrapper {
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* line 18, ../sass/_rules.scss */
+.stream-off .wrapper {
+  -webkit-transform: scale(3);
+  transform: scale(3);
+  opacity: 0;
+}
+
+/* line 25, ../sass/_rules.scss */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.1s;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.1s;
+}
+
+/* line 40, ../sass/_rules.scss */
+.cover {
+  position: absolute;
+  background: white url(../../img/preloader.gif) center center no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+/* line 50, ../sass/_rules.scss */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 57, ../sass/_rules.scss */
+.card .card-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+/* line 68, ../sass/_rules.scss */
+.card .card-content.landscape-layout .coverPhoto {
+  height: 50%;
+}
+/* line 72, ../sass/_rules.scss */
+.card .card-content.landscape-layout .description {
+  background: #fff;
+}
+/* line 78, ../sass/_rules.scss */
+.card .card-content.row-layout .coverPhoto {
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 86, ../sass/_rules.scss */
+.card .card-content.row-layout .coverPhoto2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 97, ../sass/_rules.scss */
+.card .card-content.row-layout .description {
+  background: #fff;
+}
+/* line 102, ../sass/_rules.scss */
+.card .card-content.earth-card {
+  background: #231838 url(../../img/dirt.png);
+}
+/* line 105, ../sass/_rules.scss */
+.card .card-content.earth-card .star-sky {
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background: url(../../img/star-sky.png) center center no-repeat;
+}
+/* line 112, ../sass/_rules.scss */
+.card .card-content.earth-card .star-sky.first {
+  top: 100px;
+  right: 100px;
+}
+/* line 117, ../sass/_rules.scss */
+.card .card-content.earth-card .star-sky.second {
+  bottom: 50px;
+  right: 200px;
+}
+/* line 123, ../sass/_rules.scss */
+.card .card-content.earth-card h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.7em;
+  margin: 20px 0;
+}
+/* line 130, ../sass/_rules.scss */
+.card .card-content.earth-card .globe {
+  z-index: 10;
+  width: 235px;
+  height: 235px;
+  background: url(../../img/earth3.jpg);
+  background-repeat: repeat-x;
+  background-position: -120px -115px;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+  top: 150px;
+  -webkit-box-shadow: 10px 0px 0px 10px rgba(0, 0, 0, 0.3), inset -10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 0px 0px 10px rgba(0, 0, 0, 0.3), inset -10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+/* line 146, ../sass/_rules.scss */
+.card .card-content.earth-card .marker {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+}
+/* line 153, ../sass/_rules.scss */
+.card .card-content.earth-card .marker .content {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 157, ../sass/_rules.scss */
+.card .card-content.earth-card .marker .content img {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 15px auto 5px auto;
+}
+/* line 165, ../sass/_rules.scss */
+.card .card-content.earth-card .marker .point {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 50px 12px 0 12px;
+  border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -12px;
+  top: 95px;
+  z-index: 2;
+}
+/* line 177, ../sass/_rules.scss */
+.card .card-content.earth-card .marker .point:after {
+  content: "";
+  border-radius: 50%;
+  width: 10px;
+  height: 5px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  margin-left: -5px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* line 191, ../sass/_rules.scss */
+.card .card-content.earth-card .marker.how-do {
+  left: 2px;
+  top: -44px;
+}
+/* line 196, ../sass/_rules.scss */
+.card .card-content.earth-card .marker.eye-em {
+  left: 125px;
+  top: -22px;
+}
+/* line 204, ../sass/_rules.scss */
+.card .card-content.double-interest-card > div {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+}
+/* line 214, ../sass/_rules.scss */
+.card .card-content.double-interest-card > div .content {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 218, ../sass/_rules.scss */
+.card .card-content.double-interest-card > div .content h2 {
+  font-family: "proxima_nova_rgbold", sans-serif;
+  font-size: 1.8em;
+  margin: 0 20px 20px 20px;
+  color: #fff;
+  text-align: center;
+}
+/* line 226, ../sass/_rules.scss */
+.card .card-content.double-interest-card > div .content a {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 10px;
+  width: 200px;
+  border: 1px solid #fff;
+  font-family: "proxima_novalight", sans-serif;
+  font-weight: 100;
+  font-size: 1.6em;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+/* line 242, ../sass/_rules.scss */
+.card .card-content.double-interest-card .top {
+  top: 0;
+}
+/* line 246, ../sass/_rules.scss */
+.card .card-content.double-interest-card .bottom {
+  bottom: 0;
+}
+/* line 251, ../sass/_rules.scss */
+.card .card-content.interest-list-card {
+  text-align: center;
+}
+/* line 253, ../sass/_rules.scss */
+.card .card-content.interest-list-card h2 {
+  font-size: 1.8em;
+  color: #fff;
+  font-family: "proxima_nova_rgregular", sans-serif;
+  font-weight: normal;
+  margin: 80px 30px;
+  text-align: center;
+}
+/* line 262, ../sass/_rules.scss */
+.card .card-content.interest-list-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+/* line 268, ../sass/_rules.scss */
+.card .card-content.interest-list-card ul li {
+  display: block;
+  width: 44%;
+  margin: 8px 3%;
+  float: left;
+}
+/* line 274, ../sass/_rules.scss */
+.card .card-content.interest-list-card ul li:nth-child(2n+1) {
+  clear: left;
+}
+/* line 279, ../sass/_rules.scss */
+.card .card-content.interest-list-card ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 5px;
+  border: 1px solid #fff;
+  font-family: "proxima_novalight", sans-serif;
+  font-weight: 100;
+}
+/* line 295, ../sass/_rules.scss */
+.card .card-content.interest-card {
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 301, ../sass/_rules.scss */
+.card .card-content.interest-card h2 {
+  font-size: 1.8em;
+  color: #fff;
+  font-family: "proxima_novalight", sans-serif;
+  font-weight: normal;
+  margin: 80px 30px 20px 30px;
+  text-align: center;
+}
+/* line 310, ../sass/_rules.scss */
+.card .card-content.interest-card h3 {
+  font-size: 1.8em;
+  color: #fff;
+  font-family: "proxima_nova_rgbold", sans-serif;
+  font-weight: normal;
+  margin: 50px 30px 0px 30px;
+  text-align: center;
+}
+/* line 319, ../sass/_rules.scss */
+.card .card-content.interest-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+}
+/* line 327, ../sass/_rules.scss */
+.card .card-content.interest-card ul li {
+  display: inline-block;
+  width: 50px;
+  margin: 10px 8px;
+  float: left;
+}
+/* line 334, ../sass/_rules.scss */
+.card .card-content.interest-card ul img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* line 340, ../sass/_rules.scss */
+.card .card-content.interest-card ul a {
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+/* line 344, ../sass/_rules.scss */
+.card .card-content.interest-card ul a.number {
+  color: #fff;
+  border-radius: 7px;
+  border: 1px solid #fff;
+  height: 48px;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+/* line 356, ../sass/_rules.scss */
+.card .card-content.interest-card .btn {
+  border: 1px solid #fff;
+  color: #fff;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+  padding: 20px 30px;
+  margin-top: 20px;
+  display: block;
+  margin: 20px 40px 20px 40px;
+}
+/* line 372, ../sass/_rules.scss */
+.card .card-content.city-card {
+  background-image: url(../../img/berlin-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 378, ../sass/_rules.scss */
+.card .card-content.city-card .content {
+  margin-top: 60%;
+}
+/* line 382, ../sass/_rules.scss */
+.card .card-content.city-card h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.7em;
+}
+/* line 388, ../sass/_rules.scss */
+.card .card-content.city-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+/* line 394, ../sass/_rules.scss */
+.card .card-content.city-card ul li {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 15px 0;
+  float: left;
+}
+/* line 401, ../sass/_rules.scss */
+.card .card-content.city-card ul li:nth-child(3n+1) {
+  clear: left;
+}
+/* line 405, ../sass/_rules.scss */
+.card .card-content.city-card ul li a {
+  display: block;
+  text-decoration: none;
+}
+/* line 410, ../sass/_rules.scss */
+.card .card-content.city-card ul li img {
+  width: 50px;
+  height: auto;
+}
+/* line 415, ../sass/_rules.scss */
+.card .card-content.city-card ul li h2, .card .card-content.city-card ul li h3 {
+  color: #fff;
+}
+/* line 419, ../sass/_rules.scss */
+.card .card-content.city-card ul li h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-family: "proxima_novalight", sans-serif;
+}
+/* line 429, ../sass/_rules.scss */
+.card .card-content.plain-card {
+  background-color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* line 436, ../sass/_rules.scss */
+.card .card-content.facebook-card {
+  background-image: url(../../img/facebook-cover.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 442, ../sass/_rules.scss */
+.card .card-content.facebook-card .content {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+}
+/* line 449, ../sass/_rules.scss */
+.card .card-content.facebook-card .title {
+  position: relative;
+  margin-left: 90px;
+  margin-right: 10px;
+  top: 80px;
+  font-family: "proxima_novalight", sans-serif;
+  font-size: 1.8em;
+}
+/* line 457, ../sass/_rules.scss */
+.card .card-content.facebook-card .title b {
+  font-family: "proxima_nova_rgbold", sans-serif;
+  display: block;
+}
+/* line 463, ../sass/_rules.scss */
+.card .card-content.facebook-card .app-icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 5px;
+}
+/* line 469, ../sass/_rules.scss */
+.card .card-content.facebook-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 477, ../sass/_rules.scss */
+.card .card-content.facebook-card .apps > li {
+  display: block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin: 15px 0;
+}
+/* line 484, ../sass/_rules.scss */
+.card .card-content.facebook-card .apps > li:nth-child(2n+1) {
+  clear: left;
+}
+/* line 488, ../sass/_rules.scss */
+.card .card-content.facebook-card .apps > li h2 {
+  color: #fff;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+/* line 494, ../sass/_rules.scss */
+.card .card-content.facebook-card .apps > li h3 {
+  color: #fff;
+  font-family: "proxima_novalight", sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+/* line 504, ../sass/_rules.scss */
+.card .card-content.facebook-card .avatars {
+  display: inline-block;
+  height: 25px;
+}
+/* line 508, ../sass/_rules.scss */
+.card .card-content.facebook-card .avatars li {
+  display: block;
+  line-height: 25px;
+  float: left;
+  margin: 0 2px;
+}
+/* line 513, ../sass/_rules.scss */
+.card .card-content.facebook-card .avatars li.number {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  height: 25px;
+  width: 25px;
+  color: #fff;
+  font-size: 1.2em;
+}
+/* line 523, ../sass/_rules.scss */
+.card .card-content.facebook-card .avatars img {
+  width: 25px;
+  height: auto;
+  border-radius: 50%;
+}
+/* line 532, ../sass/_rules.scss */
+.card .coverPhoto {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s ease-in-out 1s;
+  transition: all 0.2s ease-in-out 1s;
+}
+/* line 542, ../sass/_rules.scss */
+.card .description {
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px -10px 20px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -10px 20px -3px rgba(0, 0, 0, 0.5);
+}
+/* line 553, ../sass/_rules.scss */
+.card .description h1 {
+  font-size: 1.7em;
+  color: #000;
+  font-weight: bold;
+}
+/* line 559, ../sass/_rules.scss */
+.card .description > p {
+  font-weight: 100;
+}
+/* line 563, ../sass/_rules.scss */
+.card .description > img {
+  width: 75px;
+  height: auto;
+  float: left;
+}
+/* line 569, ../sass/_rules.scss */
+.card .description .content {
+  margin-left: 85px;
+  margin-right: 70px;
+}
+/* line 572, ../sass/_rules.scss */
+.card .description .content .interest {
+  font-size: 1.4em;
+  margin: 0;
+  font-weight: normal;
+}
+/* line 578, ../sass/_rules.scss */
+.card .description .content .price {
+  font-size: 1.4em;
+  margin: 0;
+  font-weight: normal;
+}
+/* line 586, ../sass/_rules.scss */
+.card .button {
+  display: block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  text-indent: -9999px;
+  background: url(../../img/star-button.png) center center no-repeat;
+  background-size: 100% auto;
+}
+/* line 599, ../sass/_rules.scss */
+.card.shadow .card-content {
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+}
+/* line 606, ../sass/_rules.scss */
+.card.animatedCard {
+  -webkit-transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* line 612, ../sass/_rules.scss */
+.navigation {
+  background: url(../../img/navi.png) 10px 0 no-repeat;
+  background-size: 25px auto;
+  padding-bottom: 10px;
+}
+/* line 617, ../sass/_rules.scss */
+.navigation > div {
+  margin-left: 20px;
+}
+/* line 621, ../sass/_rules.scss */
+.navigation a {
+  border: 1px solid #2bbed8;
+  color: #2bbed8;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 5px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 634, ../sass/_rules.scss */
+.navigation a:active {
+  background: #2bbed8;
+  color: #fff;
+}
+
+/* line 641, ../sass/_rules.scss */
+.btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 35px;
+  border: 2px solid #000;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.6em;
+}
+/* line 651, ../sass/_rules.scss */
+.btn.blue {
+  background: #2bbed8;
+  color: #fff;
+  border: 0;
+}
+
+/* line 658, ../sass/_rules.scss */
+#cards-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  background: #fff;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
+}
+/* line 670, ../sass/_rules.scss */
+#cards-navigation h2 {
+  text-align: center;
+  font-family: "proxima_novalight", sans-serif;
+  font-weight: 100;
+  line-height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* line 682, ../sass/_rules.scss */
+#cards-navigation a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 40px;
+  height: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 690, ../sass/_rules.scss */
+#cards-navigation a:active {
+  background: #f0f0f0;
+  -webkit-box-shadow: inset -5px 0px 8px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -5px 0px 8px -2px rgba(0, 0, 0, 0.2);
+}
+/* line 696, ../sass/_rules.scss */
+#cards-navigation a span {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 2, ../sass/_home.scss */
+.stream-on .homescreen {
+  -webkit-transform: scale(3);
+  transform: scale(3);
+  opacity: 0;
+}
+
+/* line 10, ../sass/_home.scss */
+.backAnimation .homescreen {
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.1s;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.1s;
+}
+
+/* line 15, ../sass/_home.scss */
+.homescreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* line 26, ../sass/_home.scss */
+.homescreen nav {
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 37, ../sass/_home.scss */
+.homescreen nav:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  height: 15px;
+  width: 60px;
+  background: url(../../img/logo.png) center top no-repeat;
+  background-size: contain;
+}
+/* line 48, ../sass/_home.scss */
+.homescreen nav h1 {
+  text-align: center;
+  font-size: 1.6em;
+  font-family: "proxima_novalight", sans-serif;
+  color: #000;
+  margin: 10px 50px 0 50px;
+  font-weight: 100;
+}
+/* line 57, ../sass/_home.scss */
+.homescreen nav ul {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+/* line 64, ../sass/_home.scss */
+.homescreen nav ul li {
+  display: block;
+  float: left;
+}
+/* line 69, ../sass/_home.scss */
+.homescreen nav ul a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.7em;
+  font-family: "proxima_novalight", sans-serif;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #fff;
+}
+/* line 82, ../sass/_home.scss */
+.homescreen nav ul a:nth-child(1) {
+  margin-left: -1px;
+}
+/* line 86, ../sass/_home.scss */
+.homescreen nav ul a.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+/* line 92, ../sass/_home.scss */
+.homescreen nav #search-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 40px;
+  background: url(../../img/search-icon.png) center center no-repeat;
+  background-size: 20px 20px;
+}
+/* line 104, ../sass/_home.scss */
+.homescreen .card {
+  background: url(../../img/home-bg.png) center center no-repeat;
+  background-size: cover;
+  top: 40px;
+}
+/* line 109, ../sass/_home.scss */
+.homescreen .card .badge {
+  left: auto;
+}
+/* line 113, ../sass/_home.scss */
+.homescreen .card.shadow {
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+}
+/* line 120, ../sass/_home.scss */
+.homescreen .apps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 125, ../sass/_home.scss */
+.homescreen .apps li {
+  display: inline-block;
+}
+/* line 128, ../sass/_home.scss */
+.homescreen .apps a {
+  display: block;
+  width: 30px;
+}
+/* line 133, ../sass/_home.scss */
+.homescreen .apps img {
+  max-width: 100%;
+}
+/* line 141, ../sass/_home.scss */
+.homescreen .home-shelf .book:nth-child(1) {
+  height: 57%;
+  margin: 10px 3% 0 3%;
+  clear: both;
+}
+/* line 147, ../sass/_home.scss */
+.homescreen .home-shelf .book:nth-child(2) {
+  height: 28%;
+  float: left;
+  width: 45%;
+  margin: 15px 2% 0 3%;
+}
+/* line 154, ../sass/_home.scss */
+.homescreen .home-shelf .book:nth-child(3) {
+  height: 28%;
+  float: left;
+  width: 45%;
+  margin: 15px 3% 0 2%;
+}
+/* line 161, ../sass/_home.scss */
+.homescreen .home-shelf .book .content {
+  position: absolute;
+  left: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  bottom: 10%;
+  width: 100%;
+  margin-left: 10px;
+}
+/* line 172, ../sass/_home.scss */
+.homescreen .home-shelf .book.button .cross {
+  right: auto;
+  left: 25px;
+}
+/* line 186, ../sass/_home.scss */
+.homescreen .interest-shelf .book:nth-child(1) {
+  height: 43%;
+  width: 45%;
+  margin: 15px 2% 0 3%;
+  float: left;
+}
+/* line 193, ../sass/_home.scss */
+.homescreen .interest-shelf .book:nth-child(2) {
+  height: 43%;
+  float: left;
+  width: 45%;
+  margin: 15px 3% 0 2%;
+}
+/* line 200, ../sass/_home.scss */
+.homescreen .interest-shelf .book:nth-child(3) {
+  height: 43%;
+  float: left;
+  width: 45%;
+  margin: 15px 2% 0 3%;
+  clear: left;
+}
+/* line 208, ../sass/_home.scss */
+.homescreen .interest-shelf .book:nth-child(4) {
+  height: 43%;
+  float: left;
+  width: 45%;
+  margin: 15px 3% 0 2%;
+}
+/* line 215, ../sass/_home.scss */
+.homescreen .interest-shelf .book .content {
+  position: absolute;
+  left: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  bottom: 25%;
+  width: 100%;
+  margin-left: 10px;
+}
+/* line 226, ../sass/_home.scss */
+.homescreen .interest-shelf .book.button .cross {
+  right: auto;
+  left: 25px;
+}
+/* line 240, ../sass/_home.scss */
+.homescreen .magazine-shelf .book:nth-child(1) {
+  height: 44%;
+  margin: 10px 3% 0 3%;
+  clear: both;
+}
+/* line 245, ../sass/_home.scss */
+.homescreen .magazine-shelf .book:nth-child(1) .content {
+  bottom: 15%;
+  text-align: center;
+}
+/* line 250, ../sass/_home.scss */
+.homescreen .magazine-shelf .book:nth-child(1) .avatar {
+  width: 100px;
+}
+/* line 255, ../sass/_home.scss */
+.homescreen .magazine-shelf .book:nth-child(2) {
+  height: 43%;
+  float: left;
+  width: 45%;
+  margin: 15px 2% 0 3%;
+}
+/* line 262, ../sass/_home.scss */
+.homescreen .magazine-shelf .book:nth-child(3) {
+  height: 43%;
+  float: left;
+  width: 45%;
+  margin: 15px 3% 0 2%;
+}
+/* line 269, ../sass/_home.scss */
+.homescreen .magazine-shelf .book .content {
+  position: absolute;
+  left: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  bottom: 25%;
+  width: 100%;
+  margin-left: 10px;
+}
+/* line 280, ../sass/_home.scss */
+.homescreen .magazine-shelf .book.button .cross {
+  right: auto;
+  left: 25px;
+}
+/* line 292, ../sass/_home.scss */
+.homescreen .book {
+  width: auto;
+  height: auto;
+  margin: 10px 10px 20px 10px;
+  float: none;
+}
+/* line 298, ../sass/_home.scss */
+.homescreen .book .text {
+  margin-top: 5px;
+}
+/* line 302, ../sass/_home.scss */
+.homescreen .book .apps {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+/* line 307, ../sass/_home.scss */
+.homescreen .book .apps li {
+  display: inline-block;
+}
+/* line 311, ../sass/_home.scss */
+.homescreen .book .apps a {
+  display: block;
+  width: 30px;
+}
+/* line 318, ../sass/_home.scss */
+.homescreen .book.tall .title {
+  margin-top: 80px;
+}
+
+/* line 325, ../sass/_home.scss */
+.book {
+  display: block;
+  float: left;
+  margin: 10px;
+  width: 300px;
+  height: 100px;
+  color: #fff;
+  position: relative;
+  z-index: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 339, ../sass/_home.scss */
+.book.loading .loader {
+  opacity: 1;
+}
+/* line 345, ../sass/_home.scss */
+.book .loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 150;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 356, ../sass/_home.scss */
+.book .loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../../img/logo-gray.png) center center no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+/* line 374, ../sass/_home.scss */
+.book .title {
+  font-size: 1.5em;
+  font-family: "proxima_nova_rgbold", sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+}
+/* line 381, ../sass/_home.scss */
+.book .text {
+  font-family: "proxima_novalight", sans-serif;
+  font-size: 1.4em;
+  font-weight: 100;
+  margin: 10px 10px 0 0;
+}
+/* line 388, ../sass/_home.scss */
+.book .meta {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  font-size: 1.3em;
+}
+/* line 395, ../sass/_home.scss */
+.book:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -2px;
+  top: 1px;
+  width: 98%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-top: 0;
+  border-left: 0;
+  z-index: -2;
+}
+/* line 410, ../sass/_home.scss */
+.book:after {
+  content: "";
+  display: block;
+  z-index: -1;
+  position: absolute;
+  right: -4px;
+  top: 4px;
+  width: 98%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-top: 0;
+  border-left: 0;
+}
+/* line 425, ../sass/_home.scss */
+.book .star {
+  background: url(../../img/single-star.png) center center no-repeat;
+  background-size: cover;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+/* line 435, ../sass/_home.scss */
+.book .badge {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #2bbed8;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 13px;
+  border-radius: 50%;
+  text-align: center;
+}
+/* line 452, ../sass/_home.scss */
+.book .cross {
+  display: none;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+/* line 460, ../sass/_home.scss */
+.book .cross:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+}
+/* line 471, ../sass/_home.scss */
+.book .cross:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: #fff;
+}
+/* line 483, ../sass/_home.scss */
+.book .content {
+  margin-left: 10%;
+  text-align: left;
+  padding: 15px 0;
+}
+/* line 489, ../sass/_home.scss */
+.book .left-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+/* line 497, ../sass/_home.scss */
+.book .left-border:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 3px;
+  height: 6px;
+  width: 100%;
+  background: #555;
+  -moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(45deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(45deg) skewY(0deg);
+  -o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(45deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(45deg) skewY(0deg);
+  transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(45deg) skewY(0deg);
+}
+/* line 513, ../sass/_home.scss */
+.book.common {
+  height: auto;
+}
+/* line 518, ../sass/_home.scss */
+.book.black .left-border:after {
+  background: #000;
+}
+/* line 523, ../sass/_home.scss */
+.book.button {
+  background: #a4a8b3;
+  position: relative;
+  bottom: auto;
+  right: auto;
+  text-indent: 0;
+}
+/* line 530, ../sass/_home.scss */
+.book.button .content {
+  padding-top: 40px;
+}
+/* line 534, ../sass/_home.scss */
+.book.button .cross {
+  display: block;
+}
+/* line 538, ../sass/_home.scss */
+.book.button .left-border {
+  background: #fff;
+}
+/* line 541, ../sass/_home.scss */
+.book.button .left-border:after {
+  background: #ccc;
+}
+
+/* line 548, ../sass/_home.scss */
+.fire {
+  background: #ff6666;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY2NjY2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(45deg, #ff6666 0%, #ffcc00 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #ff6666), color-stop(100%, #ffcc00));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #ff6666 0%, #ffcc00 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #ff6666 0%, #ffcc00 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #ff6666 0%, #ffcc00 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #ff6666 0%, #ffcc00 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6666', endColorstr='#ffcc00',GradientType=1 );
+  /* IE6-8 fallback on horizontal gradient */
+}
+/* line 559, ../sass/_home.scss */
+.fire .left-border:after {
+  background: #af4646;
+}
+
+/* line 564, ../sass/_home.scss */
+.darkFire {
+  background: #ff0061;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmYwMDYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmY2UwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(45deg, #ff0061 0%, #ffce00 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #ff0061), color-stop(100%, #ffce00));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #ff0061 0%, #ffce00 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #ff0061 0%, #ffce00 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #ff0061 0%, #ffce00 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #ff0061 0%, #ffce00 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0061', endColorstr='#ffce00',GradientType=1 );
+  /* IE6-8 fallback on horizontal gradient */
+}
+/* line 575, ../sass/_home.scss */
+.darkFire .left-border:after {
+  background: #c3074e;
+}
+
+/* line 580, ../sass/_home.scss */
+.purple {
+  background: #6666cc;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNjY2NmNjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NiOTljYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(45deg, #6666cc 0%, #cb99cc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #6666cc), color-stop(100%, #cb99cc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #6666cc 0%, #cb99cc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #6666cc 0%, #cb99cc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #6666cc 0%, #cb99cc 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #6666cc 0%, #cb99cc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6666cc', endColorstr='#cb99cc',GradientType=1 );
+  /* IE6-8 fallback on horizontal gradient */
+}
+/* line 591, ../sass/_home.scss */
+.purple .left-border:after {
+  background: #426588;
+}
+
+/* line 596, ../sass/_home.scss */
+.seledin {
+  background: #33ccff;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMzNjY2ZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY3Y2U1MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(45deg, #33ccff 0%, #67ce52 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #33ccff), color-stop(100%, #67ce52));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #33ccff 0%, #67ce52 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #33ccff 0%, #67ce52 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #33ccff 0%, #67ce52 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #33ccff 0%, #67ce52 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ccff', endColorstr='#67ce52',GradientType=1 );
+  /* IE6-8 fallback on horizontal gradient */
+}
+/* line 607, ../sass/_home.scss */
+.seledin .left-border:after {
+  background: #2280a0;
+}
+
+/* line 612, ../sass/_home.scss */
+.green {
+  background: #00cc99;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBjYzk5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2ZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(45deg, #00cc99 0%, #66ffff 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #00cc99), color-stop(100%, #66ffff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #00cc99 0%, #66ffff 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #00cc99 0%, #66ffff 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #00cc99 0%, #66ffff 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #00cc99 0%, #66ffff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00cc99', endColorstr='#66ffff',GradientType=1 );
+  /* IE6-8 fallback on horizontal gradient */
+}
+/* line 623, ../sass/_home.scss */
+.green .left-border:after {
+  background: #007f5f;
+}
+
+/* line 628, ../sass/_home.scss */
+.blue {
+  background: #33cc99;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMzNjYzk5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwOTlmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(45deg, #33cc99 0%, #0099ff 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #33cc99), color-stop(100%, #0099ff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #33cc99 0%, #0099ff 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #33cc99 0%, #0099ff 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #33cc99 0%, #0099ff 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #33cc99 0%, #0099ff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33cc99', endColorstr='#0099ff',GradientType=1 );
+  /* IE6-8 fallback on horizontal gradient */
+}
+/* line 639, ../sass/_home.scss */
+.blue .left-border:after {
+  background: #0068ad;
+}
+
+/* line 644, ../sass/_home.scss */
+.warmPurple {
+  background: #ffcb67;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZjYjY3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkNjhjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(45deg, #ffcb67 0%, #cd68ca 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #ffcb67), color-stop(100%, #cd68ca));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #ffcb67 0%, #cd68ca 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #ffcb67 0%, #cd68ca 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #ffcb67 0%, #cd68ca 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #ffcb67 0%, #cd68ca 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcb67', endColorstr='#cd68ca',GradientType=1 );
+  /* IE6-8 fallback on horizontal gradient */
+}
+/* line 655, ../sass/_home.scss */
+.warmPurple .left-border:after {
+  background: #a58445;
+}
+
+/* line 3, ../sass/_search.scss */
+.blurry .homescreen,
+.blurry .wrapper {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+/* line 12, ../sass/_search.scss */
+.search-on .search-box {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* line 19, ../sass/_search.scss */
+.search-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.65);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  display: none;
+}
+/* line 34, ../sass/_search.scss */
+.search-box header {
+  margin-top: 10px;
+  padding: 0 10px;
+}
+/* line 38, ../sass/_search.scss */
+.search-box header > * {
+  float: left;
+}
+/* line 43, ../sass/_search.scss */
+.search-box form {
+  width: 75%;
+}
+/* line 47, ../sass/_search.scss */
+.search-box #searchbar {
+  background: white url(../../img/search-icon-dark.png) 5px center no-repeat;
+  background-size: auto 20px;
+  border: 1px solid #3c454f;
+  border-radius: 7px;
+  height: 35px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 15px 0 30px;
+  font-size: 1.5em;
+  font-family: "proxima_novalight", sans-serif;
+  font-weight: 100;
+  color: #828ba4;
+  display: block;
+  position: relative;
+  -webkit-user-select: auto;
+  outline: none;
+}
+/* line 69, ../sass/_search.scss */
+.search-box #cancel-search {
+  color: #fff;
+  font-size: 1.7em;
+  text-decoration: none;
+  font-family: "proxima_novalight", sans-serif;
+  width: 25%;
+  padding: 0;
+  line-height: 35px;
+  text-align: center;
+}
+/* line 80, ../sass/_search.scss */
+.search-box #search-results {
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px 10px;
+}
+/* line 85, ../sass/_search.scss */
+.search-box #search-results a {
+  display: block;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 12px 30px 12px 45px;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: "proxima_novalight", sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  font-weight: 100;
+}
+/* line 97, ../sass/_search.scss */
+.search-box #search-results a img {
+  width: 27px;
+  height: auto;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  margin-top: -14px;
+}
+/* line 106, ../sass/_search.scss */
+.search-box #search-results a:after {
+  content: "+";
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5em;
+  display: block;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -5px;
+}
+/* line 121, ../sass/_search.scss */
+.search-box #search-results a:last-child {
+  border-bottom: 0;
+}
+
+/* line 2, ../sass/_details.scss */
+.detailsOn .details-wrapper {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+/* line 10, ../sass/_details.scss */
+.detailsOn .wrapper {
+  -webkit-transform: scale(3);
+  transform: scale(3);
+  opacity: 0;
+}
+
+/* line 18, ../sass/_details.scss */
+.detailsOff .details-wrapper {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+/* line 24, ../sass/_details.scss */
+.detailsOff .wrapper {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* line 31, ../sass/_details.scss */
+.details-wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* line 43, ../sass/_details.scss */
+.details-wrapper .card {
+  background: #fff;
+  top: 120px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+/* line 53, ../sass/_details.scss */
+.details-wrapper .card.shadow {
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+}
+/* line 59, ../sass/_details.scss */
+.details-wrapper .card .title {
+  text-align: center;
+  font-weight: normal;
+  font-family: "proxima_novalight", sans-serif;
+  margin: 10px 0 20px 0;
+  font-size: 1.8em;
+}
+/* line 68, ../sass/_details.scss */
+.details-wrapper > header {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #333;
+  background: #fff;
+  padding: 10px;
+  z-index: 999;
+  opacity: 0.99;
+  -webkit-box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 85, ../sass/_details.scss */
+.details-wrapper > header .app-icon {
+  width: 60px;
+  height: auto;
+  float: left;
+}
+/* line 91, ../sass/_details.scss */
+.details-wrapper > header .app-description {
+  margin-left: 70px;
+}
+/* line 94, ../sass/_details.scss */
+.details-wrapper > header .app-description h2 {
+  margin: 0 65px 0 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 16px;
+}
+/* line 100, ../sass/_details.scss */
+.details-wrapper > header .app-description > span {
+  display: block;
+  margin-right: 120px;
+}
+/* line 106, ../sass/_details.scss */
+.details-wrapper > header .app-description .author {
+  font-weight: 100;
+  overflow: hidden;
+  font-size: 1.2em;
+}
+/* line 112, ../sass/_details.scss */
+.details-wrapper > header .app-description .app-type {
+  font-weight: 700;
+  overflow: hidden;
+  font-size: 1.4em;
+}
+/* line 120, ../sass/_details.scss */
+.details-wrapper #cards-navigation {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 125, ../sass/_details.scss */
+.details-wrapper img {
+  max-width: 100%;
+}
+/* line 129, ../sass/_details.scss */
+.details-wrapper .excerpt {
+  margin: 10px;
+}
+/* line 134, ../sass/_details.scss */
+.details-wrapper .excerpt p {
+  font-size: 1.4em;
+}
+/* line 138, ../sass/_details.scss */
+.details-wrapper .excerpt a {
+  display: inline-block;
+  float: right;
+  padding: 5px 20px;
+  border: 2px solid #000;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+/* line 150, ../sass/_details.scss */
+.details-wrapper .comments-list {
+  margin: 0 10px;
+}
+/* line 154, ../sass/_details.scss */
+.details-wrapper .comments-list ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 159, ../sass/_details.scss */
+.details-wrapper .comments-list li {
+  margin: 15px 0;
+}
+/* line 162, ../sass/_details.scss */
+.details-wrapper .comments-list li span {
+  display: block;
+}
+/* line 165, ../sass/_details.scss */
+.details-wrapper .comments-list li .content {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+/* line 169, ../sass/_details.scss */
+.details-wrapper .comments-list li .when {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+/* line 176, ../sass/_details.scss */
+.details-wrapper .comments-list .stars {
+  display: inline-block;
+  width: 60px;
+  height: 10px;
+  background: url(../../img/comment-stars.png) center center no-repeat;
+  background-size: contain;
+}
+/* line 185, ../sass/_details.scss */
+.details-wrapper .comments-list a {
+  display: inline-block;
+  float: right;
+  padding: 5px 20px;
+  border: 2px solid #000;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+/* line 198, ../sass/_details.scss */
+.details-wrapper .screenshot-slider {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+/* line 205, ../sass/_details.scss */
+.details-wrapper .screenshot-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+/* line 212, ../sass/_details.scss */
+.details-wrapper .screenshot-wrap > div {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  opacity: 0.99;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+/* line 227, ../sass/_details.scss */
+.bullets {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+}
+/* line 235, ../sass/_details.scss */
+.bullets > div {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  font-size: 1.6em;
+  color: #555;
+  font-family: "proxima_nova_rgregular", sans-serif;
+  line-height: 40px;
+}
+
+/* line 250, ../sass/_details.scss */
+.buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+/* line 255, ../sass/_details.scss */
+.buttons a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 5px;
+}
+/* line 261, ../sass/_details.scss */
+.buttons .download {
+  background: transparent;
+  color: #2bbed8;
+  border: 1px solid #2bbed8;
+  text-align: center;
+  height: 25px;
+  line-height: 28px;
+  padding: 0 10px;
+  font-size: 1.4em;
+}
+/* line 272, ../sass/_details.scss */
+.buttons .share {
+  background: url(../../img/share-icon.png) center center no-repeat;
+  background-size: contain;
+  height: 25px;
+  width: 25px;
+  position: relative;
+  top: 7px;
+}
+/* line 281, ../sass/_details.scss */
+.buttons .add {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  top: 7px;
+}
+/* line 287, ../sass/_details.scss */
+.buttons .add:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: #000;
+  left: 50%;
+  margin-left: -1px;
+  top: 0;
+}
+/* line 299, ../sass/_details.scss */
+.buttons .add:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+}
+
+/* line 1, ../sass/_cardwidgets.scss */
+.movie {
+  width: 100%;
+  height: 290px;
+}
+
+/* line 6, ../sass/_cardwidgets.scss */
+.price-drop {
+  position: relative;
+  padding: 80px 0px 30px 0px;
+}
+/* line 10, ../sass/_cardwidgets.scss */
+.price-drop .chart {
+  border-bottom: 2px solid #000;
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 20px;
+}
+/* line 18, ../sass/_cardwidgets.scss */
+.price-drop .chart > div {
+  width: 60px;
+  text-align: center;
+  font-size: 1.4em;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+/* line 26, ../sass/_cardwidgets.scss */
+.price-drop .chart .first-column {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  height: 100%;
+  background: #2bbed8;
+  color: #fff;
+}
+/* line 35, ../sass/_cardwidgets.scss */
+.price-drop .chart .second-column {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  height: 100%;
+  color: #000;
+}
+/* line 41, ../sass/_cardwidgets.scss */
+.price-drop .chart .second-column:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #2bbed8;
+}
+/* line 53, ../sass/_cardwidgets.scss */
+.price-drop:before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url(../../img/price-drop.png) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  margin-left: -40px;
+}
+
+/* line 67, ../sass/_cardwidgets.scss */
+.metacritic {
+  position: relative;
+  padding: 70px 0px 30px 0px;
+}
+/* line 72, ../sass/_cardwidgets.scss */
+.metacritic:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../../img/news.png) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  margin-left: -30px;
+}
+/* line 85, ../sass/_cardwidgets.scss */
+.metacritic p {
+  color: #000;
+  font-size: 1.6em;
+  font-weight: 100;
+  margin: 5px 40px 0 40px;
+  text-align: center;
+}
+/* line 92, ../sass/_cardwidgets.scss */
+.metacritic .meta {
+  margin-top: 10px;
+  text-align: center;
+}
+/* line 97, ../sass/_cardwidgets.scss */
+.metacritic .meta span {
+  display: block;
+  font-family: "proxima_nova_rgbold", sans-serif;
+}
+/* line 103, ../sass/_cardwidgets.scss */
+.metacritic .author {
+  color: #000;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 110, ../sass/_cardwidgets.scss */
+.metacritic .score {
+  color: #000;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+/* line 115, ../sass/_cardwidgets.scss */
+.metacritic .score i {
+  display: block;
+  margin: 0 auto;
+  color: #000;
+  border: 3px solid #ffde00;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 5px;
+}
+
+/* line 132, ../sass/_cardwidgets.scss */
+.comment-excerpt {
+  position: relative;
+  padding: 70px 0px 30px 0px;
+}
+/* line 136, ../sass/_cardwidgets.scss */
+.comment-excerpt p {
+  font-size: 1.6em;
+  text-align: center;
+  display: block;
+  margin: 0 40px;
+}
+/* line 143, ../sass/_cardwidgets.scss */
+.comment-excerpt .stars {
+  display: block;
+  width: 76px;
+  height: 13px;
+  background: url(../../img/comment-stars.png) center center no-repeat;
+  background-size: cover;
+  margin: 10px auto;
+}
+/* line 152, ../sass/_cardwidgets.scss */
+.comment-excerpt:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../../img/comment-icon.png) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  margin-left: -30px;
+}
+
+/* line 166, ../sass/_cardwidgets.scss */
+.twitter-excerpt {
+  position: relative;
+  padding: 70px 0px 30px 0px;
+}
+/* line 170, ../sass/_cardwidgets.scss */
+.twitter-excerpt ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin: 0 30px;
+}
+/* line 178, ../sass/_cardwidgets.scss */
+.twitter-excerpt li {
+  margin: 15px 0;
+  text-align: center;
+}
+/* line 181, ../sass/_cardwidgets.scss */
+.twitter-excerpt li span {
+  font-size: 1.4em;
+  display: block;
+}
+/* line 184, ../sass/_cardwidgets.scss */
+.twitter-excerpt li span.meta {
+  font-size: 1.3em;
+}
+/* line 188, ../sass/_cardwidgets.scss */
+.twitter-excerpt li span b {
+  font-family: "proxima_nova_rgbold", sans-serif;
+}
+/* line 196, ../sass/_cardwidgets.scss */
+.twitter-excerpt:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../../img/twitter-comment.png) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  margin-left: -30px;
+}
+
+/* line 211, ../sass/_cardwidgets.scss */
+.pros-cons ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 216, ../sass/_cardwidgets.scss */
+.pros-cons li {
+  font-size: 1.5em;
+  min-height: 60px;
+  padding-top: 10px;
+  margin: 15px 0;
+}
+/* line 223, ../sass/_cardwidgets.scss */
+.pros-cons .positive {
+  background: url(../../img/vote-up.png) left center no-repeat;
+  background-size: 60px auto;
+}
+/* line 227, ../sass/_cardwidgets.scss */
+.pros-cons .positive p {
+  display: block;
+  margin: 0 20px 0 70px;
+}
+/* line 233, ../sass/_cardwidgets.scss */
+.pros-cons .negative {
+  background: url(../../img/vote-down.png) right center no-repeat;
+  background-size: 60px auto;
+}
+/* line 236, ../sass/_cardwidgets.scss */
+.pros-cons .negative p {
+  display: block;
+  margin: 0 70px 0 20px;
+}
+
+/* line 243, ../sass/_cardwidgets.scss */
+.round-badge {
+  position: absolute;
+  background: rgba(43, 190, 216, 0.7);
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  top: -100px;
+  right: -10px;
+}
+/* line 255, ../sass/_cardwidgets.scss */
+.round-badge.first {
+  top: -100px;
+  right: -10px;
+}
+/* line 260, ../sass/_cardwidgets.scss */
+.round-badge.second {
+  right: auto;
+  left: -10px;
+  top: 50px;
+}
+/* line 266, ../sass/_cardwidgets.scss */
+.round-badge.green {
+  background: rgba(147, 209, 104, 0.9);
+}
+/* line 270, ../sass/_cardwidgets.scss */
+.round-badge.red {
+  background: rgba(255, 89, 89, 0.9);
+}
+/* line 274, ../sass/_cardwidgets.scss */
+.round-badge.blue {
+  background: rgba(63, 89, 218, 0.9);
+}
+/* line 278, ../sass/_cardwidgets.scss */
+.round-badge.white {
+  background: rgba(255, 255, 255, 0.9);
+}
+/* line 280, ../sass/_cardwidgets.scss */
+.round-badge.white p {
+  color: #000;
+}
+/* line 285, ../sass/_cardwidgets.scss */
+.round-badge.col-00b489 {
+  background: rgba(0, 180, 137, 0.9);
+}
+/* line 289, ../sass/_cardwidgets.scss */
+.round-badge.col-3fdab4 {
+  background: rgba(63, 218, 180, 0.9);
+}
+/* line 293, ../sass/_cardwidgets.scss */
+.round-badge.col-3fdd73 {
+  background: rgba(63, 221, 115, 0.9);
+}
+/* line 297, ../sass/_cardwidgets.scss */
+.round-badge.col-0089ff {
+  background: rgba(0, 137, 255, 0.9);
+}
+/* line 301, ../sass/_cardwidgets.scss */
+.round-badge.col-3fb4ff {
+  background: rgba(63, 180, 255, 0.9);
+}
+/* line 305, ../sass/_cardwidgets.scss */
+.round-badge.col-7289ff {
+  background: rgba(114, 137, 255, 0.9);
+}
+/* line 309, ../sass/_cardwidgets.scss */
+.round-badge.col-d96e6e {
+  background: rgba(217, 110, 110, 0.9);
+}
+/* line 313, ../sass/_cardwidgets.scss */
+.round-badge.col-aa58d7 {
+  background: rgba(170, 88, 215, 0.9);
+}
+/* line 317, ../sass/_cardwidgets.scss */
+.round-badge.col-d144c8 {
+  background: rgba(209, 68, 200, 0.9);
+}
+/* line 321, ../sass/_cardwidgets.scss */
+.round-badge.col-d888ff {
+  background: rgba(216, 136, 255, 0.9);
+}
+/* line 325, ../sass/_cardwidgets.scss */
+.round-badge.col-ff59da {
+  background: rgba(255, 89, 218, 0.9);
+}
+/* line 329, ../sass/_cardwidgets.scss */
+.round-badge.col-d1b400 {
+  background: rgba(209, 180, 0, 0.9);
+}
+/* line 333, ../sass/_cardwidgets.scss */
+.round-badge.col-e8cf00 {
+  background: rgba(232, 207, 0, 0.9);
+}
+/* line 337, ../sass/_cardwidgets.scss */
+.round-badge.col-ffb400 {
+  background: rgba(255, 180, 0, 0.9);
+}
+/* line 341, ../sass/_cardwidgets.scss */
+.round-badge img {
+  width: 40px;
+  height: auto;
+  margin-top: 5px;
+}
+/* line 347, ../sass/_cardwidgets.scss */
+.round-badge p {
+  font-size: 1em;
+  color: #fff;
+  font-size: "proxima_nova_rgbold", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
