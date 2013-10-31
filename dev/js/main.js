@@ -349,9 +349,9 @@ var dom = {
 		if(currentContext.currentIndex != currentContext.prevIndex){
 			currentContext.currentItem.classList.removeMany('animatedCard');
 			currentContext.prevItem.classList.remove('animatedCard');
-			currentContext.direction = e.gesture.direction;
 			currentContext.currentItem.classList.add('shadow');
 			currentContext.prevItem.classList.add('shadow');
+			currentContext.direction = e.gesture.direction;
 			goBackToFront(currentContext.prevItem, e.gesture.deltaY, 0.5, 1, viewportHeight);
 			goBack(currentContext.currentItem, e.gesture.deltaY, 0.7, 1, viewportHeight);
 			currentContext.offset = Math.abs(e.gesture.deltaY);
@@ -653,8 +653,6 @@ var dom = {
 	}
 
 	function goViewBack() {
-		//e.stopPropagation();
-
 		if(inDetails){
 			detailsScreenOff();
 			currentContext = streamContext;
