@@ -70,6 +70,7 @@
                     </div>
                 </section>
             </header>
+            {{#if details.intro}}
             <article class="card">
                 {{#if details.intro.excerpt}}
                 <div class="excerpt">
@@ -92,7 +93,8 @@
                 </section>
                 {{/if}}
             </article>
-
+            {{/if}}
+            {{#if details.comments}}
             <article class="card">
                 {{#if details.comments.title}}
                     <h1 class="title">{{details.comments.title}}</h1>
@@ -116,6 +118,63 @@
                     </div>
                 {{/if}}
             </article>
+            {{/if}}
+
+            {{#if details.description}}
+                {{#with details.description}}
+                <article class="card description">
+                    <h1>{{heading}}</h1>
+                    <p>{{{excerpt}}}</p>
+                    <a href="#">Full description</a>
+                    {{#if features}}
+                    <h2>{{features.title}}</h2>
+                    <ul>
+                        {{#each features.list}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.sentiments}}
+                {{#with details.sentiments}}
+                <article class="card sentiments">
+                    <h1 class="title">{{title}}</h1>
+                    {{#if list}}
+                        {{#each list}}
+                        <div class="bubble {{this.color}}">
+                            <p>{{this.text}}</p>
+                        </div>
+                        {{/each}}
+                    {{/if}}
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.testimonials}}
+                {{#with details.testimonials}}
+                <article class="card testimonials">
+                    <div class="round-badge {{badge.color}}">
+                        <img src="{{badge.imgUrl}}" />
+                        <p>{{badge.text}}</p>
+                    </div>
+                    <h1>{{heading}}</h1>
+                    <p>{{{text}}}</p>
+                    <a href="#">{{buttonText}}</a>
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.mockups}}
+                {{#each details.mockups}}
+                <article class="card">
+                    <div class="mockup" style="background-image:url({{this}});">
+                    </div>
+                </article>
+                {{/each}}
+            {{/if}}
         </script>
         <script id="card" type="text/x-handlebars-template">
             <article class="card" data-app-name="{{appName}}">
