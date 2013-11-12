@@ -77,86 +77,87 @@ var homeContent = {
 
 	homeContent: [
 		{
-			interestFullName: 'Best Apps & Games',
-			target: 'best-apps-games', //on which stream it should point (must be the same with target property on appcards)
+			interestFullName: 'New and Noteworthy',
+			target: 'hot-and-noteworthy', //on which stream it should point (must be the same with target property on appcards)
 			style: '', //fire, seledin, warmPurple, green
-			title: 'More than Grindr - Gay apps for  dating and much more',
-			imgUrl: '../img/sk/hiking-1.jpg',
+			title: 'New and Noteworthy',
+			text: 'Travel apps and much more',
+			imgUrl: '../img/sk/travel-3.jpg',
 			text: '',
 			appIcon: '',
+			badge: '',
+			star: false
+		},
+
+		{
+			interestFullName: 'Best Apps and Games',
+			target: 'best-apps-games', //on which stream it should point (must be the same with target property on appcards)
+			style: 'fire', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
+			title: 'Best Apps and Games',
 			badge: '3',
 			star: false
 		},
 
 		{
-			interestFullName: 'Find Music',
-			target: 'music-apps', //on which stream it should point (must be the same with target property on appcards)
+			interestFullName: 'Halloween Apps',
+			target: 'halloween-games', //on which stream it should point (must be the same with target property on appcards)
 			style: 'common tall', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
-			title: 'Find music',
+			title: 'Halloween Apps',
 			text: '',
-			imgUrl: '../img/sk/music-1.jpg',
-			star: false
-		},
-
-		{
-			interestFullName: 'Take a photo',
-			target: 'camera-apps', //on which stream it should point (must be the same with target property on appcards)
-			style: 'warmPurple', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
-			title: 'Take a photo',
-			badge: '9',
+			imgUrl: '../img/sk/halloween-3.jpg',
 			star: false
 		}
 	],
 
 	interestContent: [
 		{
-			interestFullName: 'Cloud Storage Apps',
-			target: 'cloud-apps', //on which stream it should point (must be the same with target property on appcards)
-			style: 'common', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
+			interestFullName: 'Virtual Pets',
+			target: 'virtual-pets', //on which stream it should point (must be the same with target property on appcards)
+			style: 'warmPurple', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
 			title: 'Virtual Pets',
-			imgUrl: '../img/sk/cloud-1.jpg',
+			imgUrl: '',
 			text: 'Adopt a furry friend that doesn\'t poo in your house',
-			badge: '1',
+			badge: '2',
 			star: false
 		},
 
 		{
-			interestFullName: 'Weight Watchers',
-			target: 'weight-apps', //on which stream it should point (must be the same with target property on appcards)
-			style: 'green', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
-			title: 'Weight<br/>Watchers',
-			text: 'Adopt a furry friend that doesn\'t poo in your house',
-			badge: '11',
+			interestFullName: 'Puzzles and Logic Games',
+			target: 'puzzle-games', //on which stream it should point (must be the same with target property on appcards)
+			style: 'seledin', //fire, seledin, warmPurple, green
+			title: 'Puzzles and Logic Games',
+			text: 'Play some truly mind boggling jigsaws and other puzzle apps',
+			appIcon: '',
+			badge: '7',
+			star: false,
+		},
+
+		{
+			interestFullName: 'Find Music',
+			target: 'music-apps', //on which stream it should point (must be the same with target property on appcards)
+			style: 'common tall', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
+			title: 'Find Music',
+			text: 'Find tons of free apps to discover music you love',
+			imgUrl: '../img/sk/music-1.jpg',
 			star: false
 		},
 
 		{
-			interestFullName: 'Find and Drink Wine',
-			target: 'wine-apps', //on which stream it should point (must be the same with target property on appcards)
-			style: '', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
-			title: 'Find and Drink Wine',
-			text: 'Adopt a furry friend that doesn\'t poo in your house',
-			imgUrl: '../img/sk/wine-1.jpg',
-			badge: false,
-			star: false,
+			interestFullName: 'Go Hiking',
+			target: 'hiking-apps', //on which stream it should point (must be the same with target property on appcards)
+			style: 'green', //fire, seledin, warmPurple, green
+			title: 'Go Hiking',
+			text: 'Boots, pack, water and apps – all you need to hit the trail',
+			meta: '',
+			imgUrl: '',
+			appIcon: ''
 		},
-
-		{
-			interestFullName: 'Find and Drink Wine',
-			target: 'wine-apps', //on which stream it should point (must be the same with target property on appcards)
-			style: '', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
-			title: 'Find and Drink Wine',
-			text: 'Adopt a furry friend that doesn\'t poo in your house',
-			imgUrl: '../img/sk/wine-1.jpg',
-			badge: false,
-			star: false,
-		}
 	],
 
 	magazineContent: [
 		{
-			interestFullName: 'Virtual Pets',
-			target: 'virtual-pets', //on which stream it should point (must be the same with target property on appcards)
+			interestFullName: 'My saved apps 2',
+			target: 'sample', //on which stream it should point (must be the same with target property on appcards)
 			style: 'warmPurple', //common (when you want background image), tall (if you want it to be higher), button (if it should be button with plus sign), fire, seledin, warmPurple, green
 			title: 'My saved apps',
 			avatarImg: '../img/sk/avatar-2.png',
@@ -174,7 +175,7 @@ var homeContent = {
 
 		{
 			interestFullName: 'Zoe\'s cat apps',
-			target: 'tower-defense-games', //on which stream it should point (must be the same with target property on appcards)
+			target: 'cat-apps', //on which stream it should point (must be the same with target property on appcards)
 			style: 'fire', //fire, seledin, warmPurple, green
 			title: 'Zoe\'s cat apps',
 			text: '',

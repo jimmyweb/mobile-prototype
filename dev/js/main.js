@@ -250,6 +250,12 @@ var dom = {
 	document.addEventListener('DOMContentLoaded', function(){
 		prepareHomescreen();
 		dom.addStyle(dom.getEl('.cover'), {'display' : 'none'});
+		setTimeout(function(){
+			currentContext.currentItem.classList.add('animatedBook');
+		},1000);
+		setTimeout(function(){
+			currentContext.currentItem.classList.remove('animatedBook');
+		},2500);
 	});
 
 	/*
@@ -349,9 +355,9 @@ var dom = {
 		if(currentContext.currentIndex != currentContext.prevIndex){
 			currentContext.currentItem.classList.removeMany('animatedCard');
 			currentContext.prevItem.classList.remove('animatedCard');
+			currentContext.direction = e.gesture.direction;
 			currentContext.currentItem.classList.add('shadow');
 			currentContext.prevItem.classList.add('shadow');
-			currentContext.direction = e.gesture.direction;
 			goBackToFront(currentContext.prevItem, e.gesture.deltaY, 0.5, 1, viewportHeight);
 			goBack(currentContext.currentItem, e.gesture.deltaY, 0.7, 1, viewportHeight);
 			currentContext.offset = Math.abs(e.gesture.deltaY);
@@ -653,6 +659,8 @@ var dom = {
 	}
 
 	function goViewBack() {
+		//e.stopPropagation();
+
 		if(inDetails){
 			detailsScreenOff();
 			currentContext = streamContext;
@@ -890,5 +898,3 @@ var dom = {
 	}
 	
 }();
-
-
