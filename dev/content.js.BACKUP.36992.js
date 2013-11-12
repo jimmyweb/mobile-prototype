@@ -6,6 +6,66 @@ var protoContent = [
     "companyName": "Rovio Entertainment Ltd",
     "price": "0.99",
     "appType": "Classic Arcade",
+<<<<<<< HEAD
+    "iconUrl": "http://s2.xyo.net/content/icon/iphone-game/angry-birds-star-wars-ii-444VsgE.png?size=BigThumbnail",
+    "details": {
+        "intro": {
+            "screenshots": ["http://a5.mzstatic.com/us/r30/Purple4/v4/4e/05/32/4e053277-ec50-d10b-1e60-665bad92aa9f/screen640x960.jpeg", "http://a1.mzstatic.com/us/r30/Purple/v4/d7/1c/3c/d71c3cc6-384d-c8e9-4551-c44d39081d46/screen480x480.jpeg", "http://a2.mzstatic.com/us/r30/Purple/v4/59/44/6e/59446ea2-1379-8af0-32b2-e8720d136c4c/screen480x480.jpeg", "http://a2.mzstatic.com/us/r30/Purple/v4/d2/82/47/d28247da-fe53-78ec-1ed1-6fedc0d736d2/screen480x480.jpeg"],
+            "excerpt": "                The Force is strong with this one. Get ready for Angry Birds Star Wars II – the epic..."
+        },
+        "comments": {
+            "title": "Comments",
+            "chartUrl": "../img/pie-chart.png",
+            "commentsList": [{
+                "content": "I admit at first the game looked cool but then I got it and I say it is amazing. It's cute, cool and...",
+                "when": "1 days ago"
+            }, {
+                "content": "I love this game so much and I can't wait to get telapods...",
+                "when": "2 days ago"
+            }]
+        },
+        "description" : {
+        	"heading" : "Have you got what it takes to score the match winning goal?",
+        	"excerpt" : "Recreate your favourite goals in this unique football based puzzle game. Football fan or not, this app will keep you entertained for hours....",
+        	"features" : {
+        		"title" : "Features",
+        		"list" : [
+        			"Synchronize your tasks across all your devices!",
+					"Save your todo list to the cloud (Todoist.com)",
+					"Add and manage unlimited tasks and sub-tasks",
+					"Get organized with powerful features such as due dates, recurring dates, sub-tasks, task priorities, and colored projects",
+					"Organize tasks into projects and sub-projects",
+					"Access your task manager while being offline"
+        		]
+        	}
+        },
+        "sentiments" : {
+        	"title" : "People say",
+        	"list" : [
+        		{
+        			"text" : "Difficult levels",
+        			"color" : "red"
+        		},
+        		{
+        			"text" : "Great game",
+        			"color" : "green"
+        		},
+        		{
+        			"text" : "Fun and addictive",
+        			"color" : "green"
+        		}
+        	]
+        },
+        "testimonials": {
+        	"badge" : {
+        		"color" : "blue",
+        		"imgUrl" : "../img/badges/joypad.png",
+        		"text" : "Gamers love it"
+        	},
+        	"heading" : "Famous gamer said:",
+        	"text" : "<b>Best Asphalt game, the level design is great!</b> And the crazy stuff like jumps, barrel rolls, crashes...etc. <b>The physics are amazing</b> and the game modes are fun. I like a lot the infection mode. I adition of all of this, the multiplayer is very well done. <b>For me this is the best car racing in mobile until now.</b>",
+        	"buttonText" : "All gamers review"
+=======
     "rating": "50",
     "iconUrl": "http://s2.xyo.net/content/icon/iphone-game/angry-birds-star-wars-ii-444VsgE.png?size=BigThumbnail",
     "details": {
@@ -195,6 +255,7 @@ var protoContent = [
                     "text": "<strong>Organize tasks into projects</strong>and sub-projects"
                 }
             ]
+>>>>>>> d21076fd068c3ce49f9ac2f866ffe51bafa5eaa0
         }
     },
     "front": {
@@ -562,7 +623,11 @@ var protoContent = [
             "title": "Comments",
             "chartUrl": "../img/pie-chart.png",
             "commentsList": [{
+<<<<<<< HEAD
+                "content": "I can barely get on it keeps crashing and kicking me out please fix this😵🔫...",
+=======
                 "content": "I can barely get on it keeps crashing and kicking me out please fix this...",
+>>>>>>> d21076fd068c3ce49f9ac2f866ffe51bafa5eaa0
                 "when": "3 days ago"
             }, {
                 "content": "This game is great but every time I get a puzzle pice it crashes and I have to restart so pleas fix...",
@@ -895,7 +960,11 @@ var protoContent = [
                 "content": "really good and lots of choices...",
                 "when": "1 days ago"
             }, {
+<<<<<<< HEAD
+                "content": "Love how great my pics look! 👍...",
+=======
                 "content": "Love how great my pics look! ...",
+>>>>>>> d21076fd068c3ce49f9ac2f866ffe51bafa5eaa0
                 "when": "6 days ago"
             }]
         }
@@ -1514,7 +1583,11 @@ var protoContent = [
                 "content": "I love it it's adorable!! Someone to tell all your problems to...",
                 "when": "2 days ago"
             }, {
+<<<<<<< HEAD
+                "content": "I LOVE YOU SIMSIMI I LOVE YOU SO MUCH 😍😘😚😗😙😍😘😚😗😙😍😘😚😗😙😍😘😚😗😙😍😘😚😗😙...",
+=======
                 "content": "I LOVE YOU SIMSIMI I LOVE YOU SO MUCH ...",
+>>>>>>> d21076fd068c3ce49f9ac2f866ffe51bafa5eaa0
                 "when": "6 days ago"
             }]
         }

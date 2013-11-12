@@ -14,7 +14,8 @@
         <link rel="apple-touch-icon" sizes="76x76" href="../img/icon/app-icon-76.png" />
         <link rel="apple-touch-icon" sizes="120x120" href="../img/icon/app-icon-120.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="../img/icon/app-icon-152.png" />
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/pixel-perfect.css">
+        <!--<link rel="stylesheet" href="css/main.css">-->
         <script src="content.js"></script>
     </head>
     <body>
@@ -53,6 +54,7 @@
             <nav id="cards-navigation">
                 <a href="#" class="go-back-button"><span></span></a>
                 <h2>{{title}}</h2>
+                <a href="#" id="search-button"></a>
             </nav>
         </script>
         <script id="cards-nav" type="text/x-handlebars-template">
@@ -63,6 +65,9 @@
                 <section class="app-description">
                     <span class="author">by {{companyName}}</span>
                     <span class="app-type">{{appType}}</span>
+                    <span class="stars-holder">
+                        <span class="stars" style="width: {{rating}}%"></span>
+                    </span>
                     <div class="buttons">
                         <a href="#" class="add"></a>
                         <a href="#" class="share"></a>
@@ -127,12 +132,33 @@
                     <p>{{{excerpt}}}</p>
                     <a href="#">Full description</a>
                     {{#if features}}
-                    <h2>{{features.title}}</h2>
-                    <ul>
-                        {{#each features.list}}
-                        <li>{{this}}</li>
-                        {{/each}}
-                    </ul>
+                    <div class="list-holder">
+                        <ul>
+                            <li class="title"><h2>Features</h2></li>
+                            {{#each features.list}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.bullet-points}}
+                {{#with details.bullet-points}}
+                <article class="card bullet-points">
+                    <h1>{{heading}}</h1>
+                    <p>{{{excerpt}}}</p>
+                    <a href="#">Full description</a>
+                    {{#if points}}
+                    <div class="list-holder">
+                        <ul>
+                            {{#each points}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
                     {{/if}}
                 </article>
                 {{/with}}
@@ -145,9 +171,62 @@
                     {{#if list}}
                         {{#each list}}
                         <div class="bubble {{this.color}}">
-                            <p>{{this.text}}</p>
+                            <p>
+                            {{this.text}}<br />
+                            <span class="percentage">{{this.percentage}}%</span>
+                            </p>
                         </div>
                         {{/each}}
+                    {{/if}}
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.twitter-pictures}}
+                {{#with details.twitter-pictures}}
+                <article class="card twitter-pictures">
+                    <h1 class="title"><img src="../img/twitter-comment.png" /></h1>
+                    {{#if list}}
+                        <div class="list-holder">
+                            <ul>
+                                {{#each list}}
+                                <li style="background-image: url({{this.imgUrl}})"></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                    <a href="#">All Photos</a>
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.screenshots-vertical}}
+                {{#with details.screenshots-vertical}}
+                <article class="card screenshots-vertical">
+                    {{#if list}}
+                        <div class="list-holder">
+                            <ul>
+                                {{#each list}}
+                                <li style="background-image: url({{this.imgUrl}})"></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.screenshots-horizontal}}
+                {{#with details.screenshots-horizontal}}
+                <article class="card screenshots-horizontal">
+                    {{#if list}}
+                        <div class="list-holder">
+                            <ul>
+                                {{#each list}}
+                                <li style="background-image: url({{this.imgUrl}})"></li>
+                                {{/each}}
+                            </ul>
+                        </div>
                     {{/if}}
                 </article>
                 {{/with}}
@@ -163,6 +242,80 @@
                     <h1>{{heading}}</h1>
                     <p>{{{text}}}</p>
                     <a href="#">{{buttonText}}</a>
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.famous-tweets}}
+                {{#with details.famous-tweets}}
+                <article class="card famous-tweets">
+                    <h1 class="title"><img src="../img/twitter-comment.png" /></h1>
+                    {{#if list}}
+                        <ul>
+                            {{#each list}}
+                            <li>
+                                <p>{{{this.text}}}</p>
+                                {{#if this.imgUrl}}
+                                <div><img src="{{this.imgUrl}}" /></div>
+                                {{/if}}
+                                <aside>
+                                    <span class="author">{{this.author}}</span>
+                                    <span class="date">{{this.date}}</span>
+                                </aside>
+                            </li>
+                            {{/each}}
+                        </ul>
+                        <a href="#">All Tweets</a>
+                    {{/if}}
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.help-card}}
+                {{#with details.help-card}}
+                <article class="card help-card">
+                    {{#if list}}
+                        <ul>
+                            {{#each list}}
+                            <li>{{{this.text}}}</li>
+                            {{/each}}
+                        </ul>
+                    {{/if}}
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.video-card}}
+                {{#with details.video-card}}
+                <article class="card video-card">
+                    <h1 class="title">{{this.title}}</h1>
+                    <img src="{{this.videoUrl}}" />
+                    <p>{{this.comment}}</p>
+                    <aside>
+                        <span class="author">{{this.author}}</span>
+                        <span class="date">{{this.date}}</span>
+                    </aside>
+                </article>
+                {{/with}}
+            {{/if}}
+
+            {{#if details.money-card}}
+                {{#with details.money-card}}
+                <article class="card money-card">
+                    <h1 class="title">{{this.title}}</h1>
+                    {{#if this.worth}}
+                    <div class="positive-face"></div>
+                    {{else}}
+                    <div class="negative-face"></div>
+                    {{/if}}
+                    <div class="money-icon"></div>
+                    <p>{{this.comment}}</p>
+                    <aside>
+                        <span class="stars-holder">
+                            <span class="stars" style="width: {{rating}}%"></span>
+                        </span>
+                        <span class="date">{{this.date}}</span>
+                    </aside>
                 </article>
                 {{/with}}
             {{/if}}

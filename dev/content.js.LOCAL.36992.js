@@ -6,195 +6,64 @@ var protoContent = [
     "companyName": "Rovio Entertainment Ltd",
     "price": "0.99",
     "appType": "Classic Arcade",
-    "rating": "50",
     "iconUrl": "http://s2.xyo.net/content/icon/iphone-game/angry-birds-star-wars-ii-444VsgE.png?size=BigThumbnail",
     "details": {
-        "description" : {
-            "heading" : "Have you got what it takes to score the match winning goal?",
-            "excerpt" : "Recreate your favourite goals in this unique football based puzzle game. Football fan or not, this app will keep you entertained for hours....",
-            "features" : {
-                "title" : "Features",
-                "list" : [
-                    "Massively Expanded Gameplay",
-                    "Amazing New Graphics and Sound",
-                    "More Social Than Ever"
-                ]
-            }
+        "intro": {
+            "screenshots": ["http://a5.mzstatic.com/us/r30/Purple4/v4/4e/05/32/4e053277-ec50-d10b-1e60-665bad92aa9f/screen640x960.jpeg", "http://a1.mzstatic.com/us/r30/Purple/v4/d7/1c/3c/d71c3cc6-384d-c8e9-4551-c44d39081d46/screen480x480.jpeg", "http://a2.mzstatic.com/us/r30/Purple/v4/59/44/6e/59446ea2-1379-8af0-32b2-e8720d136c4c/screen480x480.jpeg", "http://a2.mzstatic.com/us/r30/Purple/v4/d2/82/47/d28247da-fe53-78ec-1ed1-6fedc0d736d2/screen480x480.jpeg"],
+            "excerpt": "                The Force is strong with this one. Get ready for Angry Birds Star Wars II – the epic..."
         },
-        "bullet-points" : {
-            "heading" : "Have you got what it takes to score the match winning goal?",
-            "excerpt" : "Recreate your favourite goals in this unique football based puzzle game. Football fan or not, this app will keep you entertained for hours....",
-            "points" : [
-                "Massively Expanded Gameplay",
-                "Amazing New Graphics and Sound",
-                "More Social Than Ever"
-            ]
+        "comments": {
+            "title": "Comments",
+            "chartUrl": "../img/pie-chart.png",
+            "commentsList": [{
+                "content": "I admit at first the game looked cool but then I got it and I say it is amazing. It's cute, cool and...",
+                "when": "1 days ago"
+            }, {
+                "content": "I love this game so much and I can't wait to get telapods...",
+                "when": "2 days ago"
+            }]
+        },
+        "description" : {
+        	"heading" : "Have you got what it takes to score the match winning goal?",
+        	"excerpt" : "Recreate your favourite goals in this unique football based puzzle game. Football fan or not, this app will keep you entertained for hours....",
+        	"features" : {
+        		"title" : "Features",
+        		"list" : [
+        			"Synchronize your tasks across all your devices!",
+					"Save your todo list to the cloud (Todoist.com)",
+					"Add and manage unlimited tasks and sub-tasks",
+					"Get organized with powerful features such as due dates, recurring dates, sub-tasks, task priorities, and colored projects",
+					"Organize tasks into projects and sub-projects",
+					"Access your task manager while being offline"
+        		]
+        	}
         },
         "sentiments" : {
-            "title" : "People say",
-            "list" : [
-                {
-                    "text" : "Difficult levels",
-                    "color" : "red",
-                    "percentage": "10"
-                },
-                {
-                    "text" : "Great game",
-                    "color" : "green",
-                    "percentage": "30"
-                },
-                {
-                    "text" : "Fun and addictive",
-                    "color" : "green",
-                    "percentage": "60"
-                }
-            ]
+        	"title" : "People say",
+        	"list" : [
+        		{
+        			"text" : "Difficult levels",
+        			"color" : "red"
+        		},
+        		{
+        			"text" : "Great game",
+        			"color" : "green"
+        		},
+        		{
+        			"text" : "Fun and addictive",
+        			"color" : "green"
+        		}
+        	]
         },
         "testimonials": {
-            "badge" : {
-                "color" : "blue",
-                "imgUrl" : "../img/badges/joypad.png",
-                "text" : "Gamers love it"
-            },
-            "heading" : "Famous gamer said:",
-            "text" : "<b>Best Asphalt game, the level design is great!</b> And the crazy stuff like jumps, barrel rolls, crashes...etc. <b>The physics are amazing</b> and the game modes are fun. I like a lot the infection mode. I adition of all of this, the multiplayer is very well done. <b>For me this is the best car racing in mobile until now.</b>",
-            "buttonText" : "All gamers review"
-        },
-        "twitter-pictures": {
-            "list": [
-                {
-                    "imgUrl" : "../img/twt-pic1.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic2.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic3.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic4.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic5.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic6.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic7.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic8.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/twt-pic9.png",
-                    "alt": "picture description"
-                }
-            ]
-        },
-        "screenshots-horizontal": {
-            "list": [
-                {
-                    "imgUrl" : "../img/scr-big-h.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-big-h.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-big-h.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-big-h.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-big-h.png",
-                    "alt": "picture description"
-                }
-            ]
-        },
-        "screenshots-vertical": {
-            "list": [
-                {
-                    "imgUrl" : "../img/scr-v.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-v.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-v.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-v.png",
-                    "alt": "picture description"
-                },
-                {
-                    "imgUrl" : "../img/scr-v.png",
-                    "alt": "picture description"
-                }
-            ]
-        },
-        "famous-tweets": {
-            "list": [
-                {
-                    "text": "This <strong>#ScoreWorldGoals</strong> game rules! It’s the best one on the market!",
-                    "author": "Justin Bieber",
-                    "date": "just now"
-                },
-                {
-                    "text": "Remember this goal like it was yesterday though! unbelievable moment. <strong>#JamesMcFadden</strong> <strong>#ScoreWorldGoals</strong> pic.twitter.com/3igXLXV4DY",
-                    "author": "Justin Bieber",
-                    "date": "2 days ago",
-                    "imgUrl": "../img/twt-pic1.png"
-                }
-            ],
-        },
-        "money-card": {
-            "title": "People think it's not woth the money",
-            "worth": "true",
-            "comment": "Wow! This is the BEST designed logic game on iPhone! Absolutely worth the money!",
-            "date": "just now",
-            "rate": "90"
-        },
-        "video-card": {
-            "title": "Despicable Me: Minion Rush - Gameplay For iPhone, iPad...",
-            "videoUrl": "imgUrl",
-            "comment": "It is and outstanding game and my number one addiction.",
-            "author": "Nikolay Kommisarienko",
-            "date": "2 days ago"
-        },
-        "help-card": {
-            "list": [
-                {
-                    "text": "<strong>Synchronize your tasks</strong>across all your devices!"
-                },
-                {
-                    "text": "<strong>Save your todo list</strong>to the cloud (Todoist.com)"
-                },
-                {
-                    "text": "<strong>Add and manage unlimited tasks</strong>and sub-tasks"
-                },
-                {
-                    "text": "<strong>Get organized</strong>with powerful features such as due dates, recurring dates, sub-tasks, task priorities, and colored projects"
-                },
-                {
-                    "text": "<strong>Organize tasks into projects</strong>and sub-projects"
-                }
-            ]
+        	"badge" : {
+        		"color" : "blue",
+        		"imgUrl" : "../img/badges/joypad.png",
+        		"text" : "Gamers love it"
+        	},
+        	"heading" : "Famous gamer said:",
+        	"text" : "<b>Best Asphalt game, the level design is great!</b> And the crazy stuff like jumps, barrel rolls, crashes...etc. <b>The physics are amazing</b> and the game modes are fun. I like a lot the infection mode. I adition of all of this, the multiplayer is very well done. <b>For me this is the best car racing in mobile until now.</b>",
+        	"buttonText" : "All gamers review"
         }
     },
     "front": {
@@ -562,7 +431,7 @@ var protoContent = [
             "title": "Comments",
             "chartUrl": "../img/pie-chart.png",
             "commentsList": [{
-                "content": "I can barely get on it keeps crashing and kicking me out please fix this...",
+                "content": "I can barely get on it keeps crashing and kicking me out please fix this😵🔫...",
                 "when": "3 days ago"
             }, {
                 "content": "This game is great but every time I get a puzzle pice it crashes and I have to restart so pleas fix...",
@@ -895,7 +764,7 @@ var protoContent = [
                 "content": "really good and lots of choices...",
                 "when": "1 days ago"
             }, {
-                "content": "Love how great my pics look! ...",
+                "content": "Love how great my pics look! 👍...",
                 "when": "6 days ago"
             }]
         }
@@ -1514,7 +1383,7 @@ var protoContent = [
                 "content": "I love it it's adorable!! Someone to tell all your problems to...",
                 "when": "2 days ago"
             }, {
-                "content": "I LOVE YOU SIMSIMI I LOVE YOU SO MUCH ...",
+                "content": "I LOVE YOU SIMSIMI I LOVE YOU SO MUCH 😍😘😚😗😙😍😘😚😗😙😍😘😚😗😙😍😘😚😗😙😍😘😚😗😙...",
                 "when": "6 days ago"
             }]
         }
